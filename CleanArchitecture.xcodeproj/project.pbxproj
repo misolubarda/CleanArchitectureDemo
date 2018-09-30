@@ -20,6 +20,9 @@
 		9A7D1F1D2160E8DE003A1158 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F1C2160E8DE003A1158 /* MovieListViewController.swift */; };
 		9A7D1F1F2160E901003A1158 /* MovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7D1F1E2160E901003A1158 /* MovieListViewController.xib */; };
 		9A7D1F222160E9EE003A1158 /* MovieListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F212160E9EE003A1158 /* MovieListViewControllerTests.swift */; };
+		9A7D1F2621610182003A1158 /* AppDependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F2521610182003A1158 /* AppDependenciesContainer.swift */; };
+		9A7D1F28216102E5003A1158 /* AppDependenciesFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F27216102E5003A1158 /* AppDependenciesFake.swift */; };
+		9A7D1F2B21610375003A1158 /* MovieSearchUseCaseFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F2A21610375003A1158 /* MovieSearchUseCaseFake.swift */; };
 		9ADADE5A2160AC92004D77F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADADE592160AC92004D77F4 /* AppDelegate.swift */; };
 		9ADADE612160AC93004D77F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ADADE602160AC93004D77F4 /* Assets.xcassets */; };
 		9ADADE642160AC93004D77F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADADE622160AC93004D77F4 /* LaunchScreen.storyboard */; };
@@ -76,6 +79,9 @@
 		9A7D1F1C2160E8DE003A1158 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		9A7D1F1E2160E901003A1158 /* MovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListViewController.xib; sourceTree = "<group>"; };
 		9A7D1F212160E9EE003A1158 /* MovieListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewControllerTests.swift; sourceTree = "<group>"; };
+		9A7D1F2521610182003A1158 /* AppDependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesContainer.swift; sourceTree = "<group>"; };
+		9A7D1F27216102E5003A1158 /* AppDependenciesFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesFake.swift; sourceTree = "<group>"; };
+		9A7D1F2A21610375003A1158 /* MovieSearchUseCaseFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchUseCaseFake.swift; sourceTree = "<group>"; };
 		9ADADE562160AC92004D77F4 /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADADE592160AC92004D77F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ADADE602160AC93004D77F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -183,6 +189,15 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		9A7D1F29216102FA003A1158 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				9A7D1F27216102E5003A1158 /* AppDependenciesFake.swift */,
+				9A7D1F2A21610375003A1158 /* MovieSearchUseCaseFake.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
 		9ADADE4D2160AC92004D77F4 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				9ADADE592160AC92004D77F4 /* AppDelegate.swift */,
+				9A7D1F2521610182003A1158 /* AppDependenciesContainer.swift */,
 				9A7D1F0A2160B5AB003A1158 /* UI */,
 				9A7D1F0B2160B5BE003A1158 /* Support */,
 				9A7D1F0C2160B5D5003A1158 /* Assets */,
@@ -222,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				9A7D1F0F2160C61F003A1158 /* AppCoordinatorTests.swift */,
+				9A7D1F29216102FA003A1158 /* Fakes */,
 				9A7D1F162160CB51003A1158 /* Search */,
 				9A7D1F202160E9DC003A1158 /* List */,
 				9ADADE702160AC93004D77F4 /* Info.plist */,
@@ -476,6 +493,7 @@
 				9A7D1F132160CAE9003A1158 /* SearchViewController.swift in Sources */,
 				9A7D1F0E2160B68A003A1158 /* AppCoordinator.swift in Sources */,
 				9A7D1F1D2160E8DE003A1158 /* MovieListViewController.swift in Sources */,
+				9A7D1F2621610182003A1158 /* AppDependenciesContainer.swift in Sources */,
 				9ADADE5A2160AC92004D77F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +505,8 @@
 				9A7D1F222160E9EE003A1158 /* MovieListViewControllerTests.swift in Sources */,
 				9A7D1F182160CB67003A1158 /* SearchViewControllerTests.swift in Sources */,
 				9A7D1F102160C61F003A1158 /* AppCoordinatorTests.swift in Sources */,
+				9A7D1F2B21610375003A1158 /* MovieSearchUseCaseFake.swift in Sources */,
+				9A7D1F28216102E5003A1158 /* AppDependenciesFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

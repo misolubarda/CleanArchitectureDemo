@@ -8,8 +8,10 @@
 
 import Foundation
 
-class MovieSearchInteractor: MovieSearchUseCase {
-    func query(for term: String, completion: (Response<Movies>) -> Void) {
+public class MovieSearchInteractor: MovieSearchUseCase {
+    public init() {}
+
+    public func query(for term: String, completion: (Response<Movies>) -> Void) {
 
     }
 }

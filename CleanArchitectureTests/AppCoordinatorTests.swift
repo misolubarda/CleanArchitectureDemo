@@ -15,7 +15,7 @@ class AppCoordinatorTests: XCTestCase {
     private var coordinator: AppCoordinator!
 
     override func setUp() {
-        coordinator = AppCoordinator(window: window)
+        coordinator = AppCoordinator(window: window, dependencies: AppDependenciesFake())
     }
 
     // MARK: Start
@@ -46,7 +46,7 @@ class AppCoordinatorTests: XCTestCase {
 
         coordinator.searchViewControllerDidRequestSearch(with: "")
 
-        expect(self.navigation.topViewController).to(beAnInstanceOf(ListViewController.self))
+        expect(self.navigation.topViewController).to(beAnInstanceOf(MovieListViewController.self))
     }
 }
 

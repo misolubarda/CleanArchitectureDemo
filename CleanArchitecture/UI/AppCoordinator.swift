@@ -8,14 +8,18 @@
 
 import UIKit
 
+protocol AppCoordinatorDependencies: MovieListViewControllerDependencies {}
+
 class AppCoordinator {
     private let window: UIWindow
     private let navigation = UINavigationController()
+    private let dependencies: AppCoordinatorDependencies
 
     var isAnimated = true
 
-    init(window: UIWindow = UIWindow(frame: UIScreen.main.bounds)) {
+    init(window: UIWindow = UIWindow(frame: UIScreen.main.bounds), dependencies: AppCoordinatorDependencies) {
         self.window = window
+        self.dependencies = dependencies
     }
 
     func start() {
@@ -28,7 +32,7 @@ class AppCoordinator {
     }
 
     private func openListScreen() {
-        navigation.pushViewController(ListViewController(), animated: isAnimated)
+        navigation.pushViewController(MovieListViewController(dependencies: dependencies), animated: isAnimated)
     }
 }
 

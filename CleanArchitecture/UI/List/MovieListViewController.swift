@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import DomainLayer
+
+protocol MovieListViewControllerDependencies {
+    var searchUseCase: MovieSearchUseCase { get }
+}
 
 class MovieListViewController: UIViewController {
-    init() {
+    private let dependencies: MovieListViewControllerDependencies
+
+    init(dependencies: MovieListViewControllerDependencies) {
+        self.dependencies = dependencies
         super.init(nibName: nil, bundle: nil)
     }
 

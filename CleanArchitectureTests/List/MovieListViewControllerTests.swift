@@ -11,7 +11,12 @@ import Nimble
 @testable import CleanArchitecture
 
 class MovieListViewControllerTests: XCTestCase {
-    private var viewController = MovieListViewController()
+    private var viewController: MovieListViewController!
+
+    override func setUp() {
+        let dependencies = AppDependenciesFake()
+        viewController = MovieListViewController(dependencies: dependencies)
+    }
 
     // MARK: Initialization
 
@@ -22,8 +27,6 @@ class MovieListViewControllerTests: XCTestCase {
     }
 
     func test_init_returnsAnInstance() {
-        let vc = MovieListViewController()
-
-        expect(vc).notTo(beNil())
+        expect(self.viewController).notTo(beNil())
     }
 }
