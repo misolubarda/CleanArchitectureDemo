@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="CleanArchitecture" customModuleProvider="target">
             <connections>
+                <outlet property="searchTextField" destination="K9C-Ng-qkn" id="zNb-34-K1z"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Hhq-8M-SJ0"/>
             </connections>
         </placeholder>
@@ -19,8 +20,31 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for movie..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9C-Ng-qkn">
+                    <rect key="frame" x="16" y="120" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg3-fI-R3g">
+                    <rect key="frame" x="163" y="170" width="48" height="30"/>
+                    <state key="normal" title="Search"/>
+                    <connections>
+                        <action selector="searchButtonTouchedUpInside:" destination="-1" eventType="touchUpInside" id="edu-7U-TKu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vg3-fI-R3g" firstAttribute="centerX" secondItem="K9C-Ng-qkn" secondAttribute="centerX" id="Ft8-r1-a3t"/>
+                <constraint firstItem="K9C-Ng-qkn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="IJ4-4F-W0b"/>
+                <constraint firstItem="K9C-Ng-qkn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Skd-Vn-51B"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K9C-Ng-qkn" secondAttribute="trailing" constant="16" id="hwd-wT-8Dn"/>
+                <constraint firstItem="vg3-fI-R3g" firstAttribute="top" secondItem="K9C-Ng-qkn" secondAttribute="bottom" constant="20" id="nL4-QP-3Ff"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>
