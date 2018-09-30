@@ -14,3 +14,5 @@ public struct Movie {
     public let release: Date
     public let overview: String
 }
+
+public typealias Movies = [Movie]
