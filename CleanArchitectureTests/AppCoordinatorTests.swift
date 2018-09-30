@@ -27,6 +27,6 @@ class AppCoordinatorTests: XCTestCase {
     func test_whenCoordinatorStarts_windowHasRootVC() {
         coordinator.start()
 
-        expect(self.window.rootViewController).notTo(beNil())
+        expect(self.window.rootViewController).to(beAnInstanceOf(SearchViewController.self))
     }
 }
