@@ -18,6 +18,8 @@ class AppCoordinatorTests: XCTestCase {
         coordinator = AppCoordinator(window: window)
     }
 
+    // MARK: Start
+
     func test_whenCoordinatorStarts_windowIsApplicationKeyWindow() {
         coordinator.start()
 
@@ -27,6 +29,29 @@ class AppCoordinatorTests: XCTestCase {
     func test_whenCoordinatorStarts_windowHasRootVC() {
         coordinator.start()
 
-        expect(self.window.rootViewController).to(beAnInstanceOf(SearchViewController.self))
+        expect(self.window.rootViewController).to(beAnInstanceOf(UINavigationController.self))
+    }
+
+    func test_whenCoordinatorStarts_searchVCIsShown() {
+        coordinator.start()
+
+        expect(self.navigation.topViewController).to(beAnInstanceOf(SearchViewController.self))
+    }
+
+    // MARK: SearchViewControllerDelegate
+
+    func test_onSearchRequest_listVCIsShown() {
+        coordinator.start()
+        coordinator.isAnimated = false
+
+        coordinator.searchViewControllerDidRequestSearch(with: "")
+
+        expect(self.navigation.topViewController).to(beAnInstanceOf(ListViewController.self))
+    }
+}
+
+extension AppCoordinatorTests {
+    private var navigation: UINavigationController {
+        return window.rootViewController as! UINavigationController
     }
 }
