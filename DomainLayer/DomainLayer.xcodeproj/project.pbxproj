@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A4B15AB2160AECE00B36592 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15A12160AECE00B36592 /* DomainLayer.framework */; };
 		9A4B15B02160AECE00B36592 /* DomainLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B15AF2160AECE00B36592 /* DomainLayerTests.swift */; };
+		9A7D1F012160B268003A1158 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F002160B268003A1158 /* Movie.swift */; };
 		9AA76EF82160B0DD00729CE7 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA76EF72160B0DD00729CE7 /* TestFile.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		9A4B15AA2160AECE00B36592 /* DomainLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4B15AF2160AECE00B36592 /* DomainLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainLayerTests.swift; sourceTree = "<group>"; };
 		9A4B15B12160AECE00B36592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A7D1F002160B268003A1158 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9AA76EF72160B0DD00729CE7 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 		9A4B15A32160AECE00B36592 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9A7D1EFF2160B257003A1158 /* Entities */,
 				9A4B15A52160AECE00B36592 /* Info.plist */,
 				9AA76EF72160B0DD00729CE7 /* TestFile.swift */,
 			);
@@ -84,6 +87,14 @@
 				9A4B15B12160AECE00B36592 /* Info.plist */,
 			);
 			path = DomainLayerTests;
+			sourceTree = "<group>";
+		};
+		9A7D1EFF2160B257003A1158 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9A7D1F002160B268003A1158 /* Movie.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A7D1F012160B268003A1158 /* Movie.swift in Sources */,
 				9AA76EF82160B0DD00729CE7 /* TestFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
