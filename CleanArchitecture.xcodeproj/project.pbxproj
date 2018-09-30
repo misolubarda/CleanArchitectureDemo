@@ -17,6 +17,9 @@
 		9A7D1F132160CAE9003A1158 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F122160CAE9003A1158 /* SearchViewController.swift */; };
 		9A7D1F152160CB1F003A1158 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7D1F142160CB1F003A1158 /* SearchViewController.xib */; };
 		9A7D1F182160CB67003A1158 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F172160CB67003A1158 /* SearchViewControllerTests.swift */; };
+		9A7D1F1D2160E8DE003A1158 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F1C2160E8DE003A1158 /* MovieListViewController.swift */; };
+		9A7D1F1F2160E901003A1158 /* MovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7D1F1E2160E901003A1158 /* MovieListViewController.xib */; };
+		9A7D1F222160E9EE003A1158 /* MovieListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F212160E9EE003A1158 /* MovieListViewControllerTests.swift */; };
 		9ADADE5A2160AC92004D77F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADADE592160AC92004D77F4 /* AppDelegate.swift */; };
 		9ADADE612160AC93004D77F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ADADE602160AC93004D77F4 /* Assets.xcassets */; };
 		9ADADE642160AC93004D77F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADADE622160AC93004D77F4 /* LaunchScreen.storyboard */; };
@@ -70,6 +73,9 @@
 		9A7D1F122160CAE9003A1158 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9A7D1F142160CB1F003A1158 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		9A7D1F172160CB67003A1158 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
+		9A7D1F1C2160E8DE003A1158 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		9A7D1F1E2160E901003A1158 /* MovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListViewController.xib; sourceTree = "<group>"; };
+		9A7D1F212160E9EE003A1158 /* MovieListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewControllerTests.swift; sourceTree = "<group>"; };
 		9ADADE562160AC92004D77F4 /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADADE592160AC92004D77F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ADADE602160AC93004D77F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 			children = (
 				9A7D1F0D2160B68A003A1158 /* AppCoordinator.swift */,
 				9A7D1F112160CACF003A1158 /* Search */,
+				9A7D1F1B2160E8BC003A1158 /* List */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -157,6 +164,23 @@
 				9A7D1F172160CB67003A1158 /* SearchViewControllerTests.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		9A7D1F1B2160E8BC003A1158 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9A7D1F1C2160E8DE003A1158 /* MovieListViewController.swift */,
+				9A7D1F1E2160E901003A1158 /* MovieListViewController.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		9A7D1F202160E9DC003A1158 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9A7D1F212160E9EE003A1158 /* MovieListViewControllerTests.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		9ADADE4D2160AC92004D77F4 = {
@@ -199,6 +223,7 @@
 			children = (
 				9A7D1F0F2160C61F003A1158 /* AppCoordinatorTests.swift */,
 				9A7D1F162160CB51003A1158 /* Search */,
+				9A7D1F202160E9DC003A1158 /* List */,
 				9ADADE702160AC93004D77F4 /* Info.plist */,
 			);
 			path = CleanArchitectureTests;
@@ -347,6 +372,7 @@
 			files = (
 				9ADADE642160AC93004D77F4 /* LaunchScreen.storyboard in Resources */,
 				9ADADE612160AC93004D77F4 /* Assets.xcassets in Resources */,
+				9A7D1F1F2160E901003A1158 /* MovieListViewController.xib in Resources */,
 				9A7D1F152160CB1F003A1158 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +475,7 @@
 			files = (
 				9A7D1F132160CAE9003A1158 /* SearchViewController.swift in Sources */,
 				9A7D1F0E2160B68A003A1158 /* AppCoordinator.swift in Sources */,
+				9A7D1F1D2160E8DE003A1158 /* MovieListViewController.swift in Sources */,
 				9ADADE5A2160AC92004D77F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A7D1F222160E9EE003A1158 /* MovieListViewControllerTests.swift in Sources */,
 				9A7D1F182160CB67003A1158 /* SearchViewControllerTests.swift in Sources */,
 				9A7D1F102160C61F003A1158 /* AppCoordinatorTests.swift in Sources */,
 			);
