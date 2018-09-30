@@ -2,8 +2,36 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:DataLayer/DataLayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DomainLayer/DomainLayer.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CleanArchitecture.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:"
+      name = "Pods">
+      <FileRef
+         location = "group:Pods/Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture.debug.xcconfig">
+      </FileRef>
+      <FileRef
+         location = "group:Pods/Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture.release.xcconfig">
+      </FileRef>
+      <FileRef
+         location = "group:Pods/Target Support Files/Pods-CleanArchitectureTests/Pods-CleanArchitectureTests.debug.xcconfig">
+      </FileRef>
+      <FileRef
+         location = "group:Pods/Target Support Files/Pods-CleanArchitectureTests/Pods-CleanArchitectureTests.release.xcconfig">
+      </FileRef>
+      <FileRef
+         location = "group:Pods/Target Support Files/Pods-CleanArchitectureUITests/Pods-CleanArchitectureUITests.debug.xcconfig">
+      </FileRef>
+      <FileRef
+         location = "group:Pods/Target Support Files/Pods-CleanArchitectureUITests/Pods-CleanArchitectureUITests.release.xcconfig">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>

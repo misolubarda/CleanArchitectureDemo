@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		02992F59727748EDE06626ED /* Pods_CleanArchitectureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C44B8D71D2071FBC4509ED7 /* Pods_CleanArchitectureUITests.framework */; };
+		9A4B15E92160AF9800B36592 /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15E82160AF9800B36592 /* DataLayer.framework */; };
+		9A4B15EA2160AF9800B36592 /* DataLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15E82160AF9800B36592 /* DataLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A4B15EC2160AF9800B36592 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15EB2160AF9800B36592 /* DomainLayer.framework */; };
+		9A4B15ED2160AF9800B36592 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15EB2160AF9800B36592 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9ADADE5A2160AC92004D77F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADADE592160AC92004D77F4 /* AppDelegate.swift */; };
 		9ADADE5C2160AC92004D77F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADADE5B2160AC92004D77F4 /* ViewController.swift */; };
 		9ADADE5F2160AC92004D77F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADADE5D2160AC92004D77F4 /* Main.storyboard */; };
@@ -36,12 +40,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9A4B15E52160AF6400B36592 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A4B15ED2160AF9800B36592 /* DomainLayer.framework in Embed Frameworks */,
+				9A4B15EA2160AF9800B36592 /* DataLayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0CE54B66E5C96B038C2C4EE5 /* Pods_CleanArchitectureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitectureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C44B8D71D2071FBC4509ED7 /* Pods_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3D835642F766FB975C233F /* Pods-CleanArchitectureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitectureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanArchitectureTests/Pods-CleanArchitectureTests.release.xcconfig"; sourceTree = "<group>"; };
 		8FDB3A8C8F23238E3551B2C7 /* Pods-CleanArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
 		93DD5DE839EB16EFD79C401A /* Pods-CleanArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture.release.xcconfig"; sourceTree = "<group>"; };
+		9A4B15E82160AF9800B36592 /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4B15EB2160AF9800B36592 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADADE562160AC92004D77F4 /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADADE592160AC92004D77F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ADADE5B2160AC92004D77F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4B15EC2160AF9800B36592 /* DomainLayer.framework in Frameworks */,
+				9A4B15E92160AF9800B36592 /* DataLayer.framework in Frameworks */,
 				9FAFBD773D0D69D883887571 /* Pods_CleanArchitecture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +115,8 @@
 		9ADADE4D2160AC92004D77F4 = {
 			isa = PBXGroup;
 			children = (
+				9A4B15EB2160AF9800B36592 /* DomainLayer.framework */,
+				9A4B15E82160AF9800B36592 /* DataLayer.framework */,
 				9ADADE582160AC92004D77F4 /* CleanArchitecture */,
 				9ADADE6D2160AC93004D77F4 /* CleanArchitectureTests */,
 				9ADADE782160AC93004D77F4 /* CleanArchitectureUITests */,
@@ -176,6 +201,7 @@
 				9ADADE522160AC92004D77F4 /* Sources */,
 				9ADADE532160AC92004D77F4 /* Frameworks */,
 				9ADADE542160AC92004D77F4 /* Resources */,
+				9A4B15E52160AF6400B36592 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,15 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CleanArchitecture-checkManifestLockResult.txt",
 			);
@@ -322,15 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CleanArchitectureUITests-checkManifestLockResult.txt",
 			);
@@ -344,15 +362,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CleanArchitectureTests-checkManifestLockResult.txt",
 			);
