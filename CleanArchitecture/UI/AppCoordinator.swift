@@ -11,8 +11,8 @@ import UIKit
 class AppCoordinator {
     private let window: UIWindow
 
-    init() {
-        window = UIWindow(frame: UIScreen.main.bounds)
+    init(window: UIWindow = UIWindow(frame: UIScreen.main.bounds)) {
+        self.window = window
     }
 
     func start() {

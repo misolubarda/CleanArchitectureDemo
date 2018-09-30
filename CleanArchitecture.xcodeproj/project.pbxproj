@@ -13,10 +13,10 @@
 		9A4B15EC2160AF9800B36592 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15EB2160AF9800B36592 /* DomainLayer.framework */; };
 		9A4B15ED2160AF9800B36592 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15EB2160AF9800B36592 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A7D1F0E2160B68A003A1158 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F0D2160B68A003A1158 /* AppCoordinator.swift */; };
+		9A7D1F102160C61F003A1158 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F0F2160C61F003A1158 /* AppCoordinatorTests.swift */; };
 		9ADADE5A2160AC92004D77F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADADE592160AC92004D77F4 /* AppDelegate.swift */; };
 		9ADADE612160AC93004D77F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ADADE602160AC93004D77F4 /* Assets.xcassets */; };
 		9ADADE642160AC93004D77F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADADE622160AC93004D77F4 /* LaunchScreen.storyboard */; };
-		9ADADE6F2160AC93004D77F4 /* CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADADE6E2160AC93004D77F4 /* CleanArchitectureTests.swift */; };
 		9ADADE7A2160AC93004D77F4 /* CleanArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADADE792160AC93004D77F4 /* CleanArchitectureUITests.swift */; };
 		9FAFBD773D0D69D883887571 /* Pods_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51D3C6FEC6DD84B4F73CD82 /* Pods_CleanArchitecture.framework */; };
 		AE025A3D334446D0049D3E10 /* Pods_CleanArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE54B66E5C96B038C2C4EE5 /* Pods_CleanArchitectureTests.framework */; };
@@ -63,13 +63,13 @@
 		9A4B15E82160AF9800B36592 /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4B15EB2160AF9800B36592 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7D1F0D2160B68A003A1158 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9A7D1F0F2160C61F003A1158 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		9ADADE562160AC92004D77F4 /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADADE592160AC92004D77F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ADADE602160AC93004D77F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9ADADE632160AC93004D77F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9ADADE652160AC93004D77F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ADADE6A2160AC93004D77F4 /* CleanArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanArchitectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ADADE6E2160AC93004D77F4 /* CleanArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureTests.swift; sourceTree = "<group>"; };
 		9ADADE702160AC93004D77F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ADADE752160AC93004D77F4 /* CleanArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADADE792160AC93004D77F4 /* CleanArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureUITests.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		9ADADE6D2160AC93004D77F4 /* CleanArchitectureTests */ = {
 			isa = PBXGroup;
 			children = (
-				9ADADE6E2160AC93004D77F4 /* CleanArchitectureTests.swift */,
+				9A7D1F0F2160C61F003A1158 /* AppCoordinatorTests.swift */,
 				9ADADE702160AC93004D77F4 /* Info.plist */,
 			);
 			path = CleanArchitectureTests;
@@ -401,15 +401,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CleanArchitectureTests/Pods-CleanArchitectureTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble-framework/Nimble.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 			);
@@ -434,7 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ADADE6F2160AC93004D77F4 /* CleanArchitectureTests.swift in Sources */,
+				9A7D1F102160C61F003A1158 /* AppCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
