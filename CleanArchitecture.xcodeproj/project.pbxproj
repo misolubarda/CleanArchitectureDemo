@@ -108,6 +108,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A7D1F0A2160B5AB003A1158 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9A7D1F0B2160B5BE003A1158 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				9ADADE652160AC93004D77F4 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		9A7D1F0C2160B5D5003A1158 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9ADADE602160AC93004D77F4 /* Assets.xcassets */,
+				9ADADE622160AC93004D77F4 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		9ADADE4D2160AC92004D77F4 = {
 			isa = PBXGroup;
 			children = (
@@ -136,9 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				9ADADE592160AC92004D77F4 /* AppDelegate.swift */,
-				9ADADE602160AC93004D77F4 /* Assets.xcassets */,
-				9ADADE622160AC93004D77F4 /* LaunchScreen.storyboard */,
-				9ADADE652160AC93004D77F4 /* Info.plist */,
+				9A7D1F0A2160B5AB003A1158 /* UI */,
+				9A7D1F0B2160B5BE003A1158 /* Support */,
+				9A7D1F0C2160B5D5003A1158 /* Assets */,
 			);
 			path = CleanArchitecture;
 			sourceTree = "<group>";
@@ -543,7 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25Y65MNYU9;
-				INFOPLIST_FILE = CleanArchitecture/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CleanArchitecture/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -563,7 +587,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25Y65MNYU9;
-				INFOPLIST_FILE = CleanArchitecture/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CleanArchitecture/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
