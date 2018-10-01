@@ -7,7 +7,8 @@
 //
 
 import DomainLayer
+import DataLayer
 
 class AppDependenciesContainer: AppCoordinatorDependencies {
-    var searchUseCase: MovieSearchUseCase = MovieSearchInteractor()
+    var searchUseCase: MovieSearchUseCase = MovieSearchInteractor(provider: TMDBMovieSearchProvider())
 }

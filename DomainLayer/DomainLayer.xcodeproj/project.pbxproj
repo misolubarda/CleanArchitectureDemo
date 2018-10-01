@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A29DD0721612006002B3C2C /* MovieSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A29DD0621612006002B3C2C /* MovieSearchProvider.swift */; };
+		9A29DD0F2161238F002B3C2C /* MovieSearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A29DD0E2161238F002B3C2C /* MovieSearchInteractorTests.swift */; };
 		9A4B15AB2160AECE00B36592 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15A12160AECE00B36592 /* DomainLayer.framework */; };
-		9A4B15B02160AECE00B36592 /* DomainLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B15AF2160AECE00B36592 /* DomainLayerTests.swift */; };
 		9A7D1F012160B268003A1158 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F002160B268003A1158 /* Movie.swift */; };
 		9A7D1F032160B31C003A1158 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F022160B31C003A1158 /* Response.swift */; };
 		9A7D1F072160B3F8003A1158 /* MovieSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F062160B3F8003A1158 /* MovieSearchUseCase.swift */; };
@@ -31,10 +32,11 @@
 /* Begin PBXFileReference section */
 		601F55A495F946FD0F1F704C /* Pods-DomainLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainLayer.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DomainLayer/Pods-DomainLayer.release.xcconfig"; sourceTree = "<group>"; };
 		99472FDE03079CEA44C26CA7 /* libPods-DomainLayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DomainLayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A29DD0621612006002B3C2C /* MovieSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchProvider.swift; sourceTree = "<group>"; };
+		9A29DD0E2161238F002B3C2C /* MovieSearchInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchInteractorTests.swift; sourceTree = "<group>"; };
 		9A4B15A12160AECE00B36592 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4B15A52160AECE00B36592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A4B15AA2160AECE00B36592 /* DomainLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A4B15AF2160AECE00B36592 /* DomainLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainLayerTests.swift; sourceTree = "<group>"; };
 		9A4B15B12160AECE00B36592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A7D1F002160B268003A1158 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9A7D1F022160B31C003A1158 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -88,6 +90,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9A29DD0521611FFA002B3C2C /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				9A29DD0621612006002B3C2C /* MovieSearchProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		9A29DD0D21612370002B3C2C /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				9A29DD0E2161238F002B3C2C /* MovieSearchInteractorTests.swift */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
 		9A4B15972160AECE00B36592 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +129,7 @@
 		9A4B15A32160AECE00B36592 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9A29DD0521611FFA002B3C2C /* Providers */,
 				9A7D1F042160B32A003A1158 /* Response models */,
 				9A7D1EFF2160B257003A1158 /* Entities */,
 				9A7D1F052160B3C0003A1158 /* Use Cases */,
@@ -123,7 +142,7 @@
 		9A4B15AE2160AECE00B36592 /* DomainLayerTests */ = {
 			isa = PBXGroup;
 			children = (
-				9A4B15AF2160AECE00B36592 /* DomainLayerTests.swift */,
+				9A29DD0D21612370002B3C2C /* Use Cases */,
 				9A4B15B12160AECE00B36592 /* Info.plist */,
 			);
 			path = DomainLayerTests;
@@ -221,6 +240,7 @@
 					};
 					9A4B15A92160AECE00B36592 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -265,15 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DomainLayerTests-checkManifestLockResult.txt",
 			);
@@ -287,15 +303,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DomainLayer-checkManifestLockResult.txt",
 			);
@@ -314,6 +326,7 @@
 				9A7D1F012160B268003A1158 /* Movie.swift in Sources */,
 				9A7D1F092160B484003A1158 /* MovieSearchInteractor.swift in Sources */,
 				9A7D1F032160B31C003A1158 /* Response.swift in Sources */,
+				9A29DD0721612006002B3C2C /* MovieSearchProvider.swift in Sources */,
 				9A7D1F072160B3F8003A1158 /* MovieSearchUseCase.swift in Sources */,
 				9AA76EF82160B0DD00729CE7 /* TestFile.swift in Sources */,
 			);
@@ -323,7 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A4B15B02160AECE00B36592 /* DomainLayerTests.swift in Sources */,
+				9A29DD0F2161238F002B3C2C /* MovieSearchInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +533,7 @@
 			baseConfigurationReference = AFEE9A12F44094047FC42677 /* Pods-DomainLayerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25Y65MNYU9;
 				INFOPLIST_FILE = DomainLayerTests/Info.plist;
@@ -530,6 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lubarda.DomainLayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -540,6 +555,7 @@
 			baseConfigurationReference = F01FBA6C21EE835CEDDC8EAD /* Pods-DomainLayerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25Y65MNYU9;
 				INFOPLIST_FILE = DomainLayerTests/Info.plist;

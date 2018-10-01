@@ -9,9 +9,13 @@
 import Foundation
 
 public class MovieSearchInteractor: MovieSearchUseCase {
-    public init() {}
+    private let provider: MovieSearchProvider
+
+    public init(provider: MovieSearchProvider) {
+        self.provider = provider
+    }
 
     public func query(for term: String, completion: (Response<Movies>) -> Void) {
-
+        provider.query(for: term, completion: completion)
     }
 }

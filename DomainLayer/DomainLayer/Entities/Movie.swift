@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Movie {
+public struct Movie: Equatable {
     public let posterPath: String
     public let title: String
     public let release: Date
