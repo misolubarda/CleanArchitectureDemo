@@ -16,4 +16,10 @@ struct Request {
     init(endpoint: Endpoint) {
         self.endpoint = endpoint
     }
+
+    var urlRequest: URLRequest? {
+        let urlString = baseUrlString + "/" + endpoint.path + authParameters + endpoint.parameters
+        guard let url = URL(string: urlString) else { return nil }
+        return URLRequest(url: url)
+    }
 }
