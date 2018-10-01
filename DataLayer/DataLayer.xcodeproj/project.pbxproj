@@ -12,6 +12,8 @@
 		9A4B15CF2160AF4300B36592 /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15C52160AF4200B36592 /* DataLayer.framework */; };
 		9A4B15D42160AF4300B36592 /* DataLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B15D32160AF4300B36592 /* DataLayerTests.swift */; };
 		9AA76EFA2160B0FA00729CE7 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA76EF92160B0FA00729CE7 /* TestFile.swift */; };
+		9AB00FF5216281F700E37DFE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB00FF4216281F700E37DFE /* Request.swift */; };
+		9AB00FF7216282D900E37DFE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB00FF6216282D900E37DFE /* Endpoint.swift */; };
 		CA270BB32A82413F0E431F70 /* libPods-DataLayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8430215E069E1DE3DCF2316A /* libPods-DataLayer.a */; };
 		D69DD430C5C8FA1304333CE9 /* libPods-DataLayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B5286D9D8E6E9ECA40DCD3 /* libPods-DataLayerTests.a */; };
 /* End PBXBuildFile section */
@@ -39,6 +41,8 @@
 		9A4B15D32160AF4300B36592 /* DataLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerTests.swift; sourceTree = "<group>"; };
 		9A4B15D52160AF4300B36592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AA76EF92160B0FA00729CE7 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
+		9AB00FF4216281F700E37DFE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		9AB00FF6216282D900E37DFE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		BF4FF1DF86E9E2724613A280 /* Pods-DataLayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataLayerTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DataLayerTests/Pods-DataLayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3B5286D9D8E6E9ECA40DCD3 /* libPods-DataLayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DataLayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,6 +100,7 @@
 		9A4B15C72160AF4200B36592 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9AB00FF3216281E700E37DFE /* Networking */,
 				9A29DD0221611FAB002B3C2C /* Providers */,
 				9A4B15C92160AF4300B36592 /* Info.plist */,
 				9AA76EF92160B0FA00729CE7 /* TestFile.swift */,
@@ -110,6 +115,15 @@
 				9A4B15D52160AF4300B36592 /* Info.plist */,
 			);
 			path = DataLayerTests;
+			sourceTree = "<group>";
+		};
+		9AB00FF3216281E700E37DFE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9AB00FF6216282D900E37DFE /* Endpoint.swift */,
+				9AB00FF4216281F700E37DFE /* Request.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		DAA50333A2A6E8488E715FDD /* Pods */ = {
@@ -283,6 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A29DD0421611FE8002B3C2C /* TMDBMovieSearchProvider.swift in Sources */,
+				9AB00FF5216281F700E37DFE /* Request.swift in Sources */,
+				9AB00FF7216282D900E37DFE /* Endpoint.swift in Sources */,
 				9AA76EFA2160B0FA00729CE7 /* TestFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
