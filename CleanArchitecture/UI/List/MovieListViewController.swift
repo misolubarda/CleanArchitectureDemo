@@ -14,9 +14,11 @@ protocol MovieListViewControllerDependencies {
 }
 
 class MovieListViewController: UIViewController {
+    private let searchTerm: String
     private let dependencies: MovieListViewControllerDependencies
 
-    init(dependencies: MovieListViewControllerDependencies) {
+    init(searchTerm: String, dependencies: MovieListViewControllerDependencies) {
+        self.searchTerm = searchTerm
         self.dependencies = dependencies
         super.init(nibName: nil, bundle: nil)
     }

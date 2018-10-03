@@ -15,7 +15,7 @@ class MovieListViewControllerTests: XCTestCase {
 
     override func setUp() {
         let dependencies = AppDependenciesFake()
-        viewController = MovieListViewController(dependencies: dependencies)
+        viewController = MovieListViewController(searchTerm: "", dependencies: dependencies)
     }
 
     // MARK: Initialization

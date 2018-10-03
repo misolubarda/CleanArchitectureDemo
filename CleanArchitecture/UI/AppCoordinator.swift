@@ -31,13 +31,14 @@ class AppCoordinator {
         window.makeKeyAndVisible()
     }
 
-    private func openListScreen() {
-        navigation.pushViewController(MovieListViewController(dependencies: dependencies), animated: isAnimated)
+    private func openListScreen(with searchTerm: String) {
+        let listVC = MovieListViewController(searchTerm: searchTerm, dependencies: dependencies)
+        navigation.pushViewController(listVC, animated: isAnimated)
     }
 }
 
 extension AppCoordinator: SearchViewControllerDelegate {
     func searchViewControllerDidRequestSearch(with term: String) {
-        openListScreen()
+        openListScreen(with: term)
     }
 }
