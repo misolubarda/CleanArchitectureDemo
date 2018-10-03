@@ -26,4 +26,21 @@ class MovieListViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        search(for: searchTerm)
+    }
+
+    private func search(for term: String) {
+        dependencies.searchUseCase.query(for: searchTerm) { response in
+            switch response {
+            case let .success(movies):
+                break
+            case let .error(error):
+                break
+            }
+        }
+    }
 }
