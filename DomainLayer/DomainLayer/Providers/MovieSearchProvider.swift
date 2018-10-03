@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol MovieSearchProvider {
-    func query(for term: String, completion: (Response<Movies>) -> Void)
+    func query(for term: String, completion: @escaping (Response<Movies>) -> Void)
 }

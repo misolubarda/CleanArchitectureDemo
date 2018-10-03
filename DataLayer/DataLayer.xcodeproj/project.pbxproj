@@ -11,6 +11,9 @@
 		9A29DD09216120B8002B3C2C /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A29DD08216120B8002B3C2C /* DomainLayer.framework */; };
 		9A4B15CF2160AF4300B36592 /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15C52160AF4200B36592 /* DataLayer.framework */; };
 		9A6D9E062164C22100184051 /* NetworkSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6D9E052164C22100184051 /* NetworkSessionFake.swift */; };
+		9A6D9E0B2165191900184051 /* TMDBMovieSearchProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6D9E0A2165191900184051 /* TMDBMovieSearchProviderTests.swift */; };
+		9A6D9E0D21651C4600184051 /* WebServiceFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6D9E0C21651C4600184051 /* WebServiceFake.swift */; };
+		9A6D9E102165256800184051 /* MovieFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6D9E0F2165256800184051 /* MovieFake.swift */; };
 		9AA76EFA2160B0FA00729CE7 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA76EF92160B0FA00729CE7 /* TestFile.swift */; };
 		9AB00FF5216281F700E37DFE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB00FF4216281F700E37DFE /* Request.swift */; };
 		9AB00FF7216282D900E37DFE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB00FF6216282D900E37DFE /* Endpoint.swift */; };
@@ -43,6 +46,9 @@
 		9A4B15CE2160AF4300B36592 /* DataLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4B15D52160AF4300B36592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A6D9E052164C22100184051 /* NetworkSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionFake.swift; sourceTree = "<group>"; };
+		9A6D9E0A2165191900184051 /* TMDBMovieSearchProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovieSearchProviderTests.swift; sourceTree = "<group>"; };
+		9A6D9E0C21651C4600184051 /* WebServiceFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceFake.swift; sourceTree = "<group>"; };
+		9A6D9E0F2165256800184051 /* MovieFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFake.swift; sourceTree = "<group>"; };
 		9AA76EF92160B0FA00729CE7 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		9AB00FF4216281F700E37DFE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9AB00FF6216282D900E37DFE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 			children = (
 				9A6D9E072164C22C00184051 /* Fakes */,
 				9AB00FFD21628BB700E37DFE /* Networking */,
+				9A6D9E0E2165210800184051 /* Providers */,
 				9A4B15D52160AF4300B36592 /* Info.plist */,
 			);
 			path = DataLayerTests;
@@ -127,9 +134,19 @@
 		9A6D9E072164C22C00184051 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				9A6D9E0F2165256800184051 /* MovieFake.swift */,
 				9A6D9E052164C22100184051 /* NetworkSessionFake.swift */,
+				9A6D9E0C21651C4600184051 /* WebServiceFake.swift */,
 			);
 			path = Fakes;
+			sourceTree = "<group>";
+		};
+		9A6D9E0E2165210800184051 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				9A6D9E0A2165191900184051 /* TMDBMovieSearchProviderTests.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		9AB00FF3216281E700E37DFE /* Networking */ = {
@@ -335,7 +352,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6D9E102165256800184051 /* MovieFake.swift in Sources */,
 				9A6D9E062164C22100184051 /* NetworkSessionFake.swift in Sources */,
+				9A6D9E0D21651C4600184051 /* WebServiceFake.swift in Sources */,
+				9A6D9E0B2165191900184051 /* TMDBMovieSearchProviderTests.swift in Sources */,
 				9AB00FFF21628BEA00E37DFE /* WebServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

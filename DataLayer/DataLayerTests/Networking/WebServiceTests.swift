@@ -15,10 +15,10 @@ class WebServiceTests: XCTestCase {
     func test_execute_whenSuccessful_returnsSuccess() {
         let sessionFake = NetworkSessionFake()
         sessionFake.data = Data.movie
-        let service = WebService(session: sessionFake)
+        let service = WebServiceProvider(session: sessionFake)
         var success: Bool?
 
-        service.execute(URLRequest.fake) { (response: Response<MovieFake>) in
+        service.execute(URLRequest.fake) { (response: Response<Movie>) in
             switch response {
             case .success:
                 success = true
@@ -32,10 +32,10 @@ class WebServiceTests: XCTestCase {
     func test_execute_onError_returnsError() {
         let sessionFake = NetworkSessionFake()
         sessionFake.error = NSError(domain: "someDomain", code: 400, userInfo: nil)
-        let service = WebService(session: sessionFake)
+        let service = WebServiceProvider(session: sessionFake)
         var error: Bool?
 
-        service.execute(URLRequest.fake) { (response: Response<MovieFake>) in
+        service.execute(URLRequest.fake) { (response: Response<Movie>) in
             switch response {
             case .error:
                 error = true
@@ -49,10 +49,10 @@ class WebServiceTests: XCTestCase {
     func test_execute_onDataNotParsable_returnsDecodingError() {
         let sessionFake = NetworkSessionFake()
         sessionFake.data = Data.movieWithMissingData
-        let service = WebService(session: sessionFake)
+        let service = WebServiceProvider(session: sessionFake)
         var result: Error?
 
-        service.execute(URLRequest.fake) { (response: Response<MovieFake>) in
+        service.execute(URLRequest.fake) { (response: Response<Movie>) in
             switch response {
             case let .error(error):
                 result = error
@@ -65,10 +65,10 @@ class WebServiceTests: XCTestCase {
 
     func test_execute_onNoErrorNorData_returnsSpecificError() {
         let sessionFake = NetworkSessionFake()
-        let service = WebService(session: sessionFake)
+        let service = WebServiceProvider(session: sessionFake)
         var result: Error?
 
-        service.execute(URLRequest.fake) { (response: Response<MovieFake>) in
+        service.execute(URLRequest.fake) { (response: Response<Movie>) in
             switch response {
             case let .error(error):
                 result = error
@@ -78,12 +78,6 @@ class WebServiceTests: XCTestCase {
 
         expect(result).to(beAnInstanceOf(WebServiceError.self))
     }
-}
-
-private struct MovieFake: Decodable {
-    let poster_path: String
-    let title: String
-    let release_date: String
 }
 
 private extension Data {

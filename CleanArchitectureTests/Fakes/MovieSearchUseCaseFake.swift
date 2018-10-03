@@ -10,7 +10,7 @@
 import DomainLayer
 
 class MovieSearchUseCaseFake: MovieSearchUseCase {
-    func query(for term: String, completion: (Response<Movies>) -> Void) {
+    func query(for term: String, completion: @escaping (Response<Movies>) -> Void) {
         completion(.success([]))
     }
 }

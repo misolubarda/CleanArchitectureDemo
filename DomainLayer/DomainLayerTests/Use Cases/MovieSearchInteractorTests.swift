@@ -34,7 +34,7 @@ private class MovieSearchProviderFake: MovieSearchProvider {
                           Movie(number: 2),
                           Movie(number: 3)]
 
-    func query(for term: String, completion: (Response<Movies>) -> Void) {
+    func query(for term: String, completion: @escaping (Response<Movies>) -> Void) {
         completion(.success(movies))
     }
 }

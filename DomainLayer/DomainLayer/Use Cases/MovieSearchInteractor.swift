@@ -15,7 +15,7 @@ public class MovieSearchInteractor: MovieSearchUseCase {
         self.provider = provider
     }
 
-    public func query(for term: String, completion: (Response<Movies>) -> Void) {
+    public func query(for term: String, completion: @escaping (Response<Movies>) -> Void) {
         provider.query(for: term, completion: completion)
     }
 }

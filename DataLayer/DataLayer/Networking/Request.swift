@@ -23,3 +23,7 @@ struct Request {
         return URLRequest(url: url)
     }
 }
+
+enum RequestError: Error {
+    case urlRequestFailed
+}

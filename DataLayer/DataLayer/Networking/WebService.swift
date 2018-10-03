@@ -9,7 +9,11 @@
 import Foundation
 import DomainLayer
 
-class WebService {
+protocol WebService: class {
+    func execute<T: Decodable>(_ request: URLRequest, callback: @escaping (Response<T>) -> Void)
+}
+
+class WebServiceProvider: WebService {
     private let session: NetworkSession
 
     init(session: NetworkSession) {
