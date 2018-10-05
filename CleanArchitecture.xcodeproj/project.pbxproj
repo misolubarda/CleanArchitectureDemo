@@ -474,7 +474,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CleanArchitectureTests/Pods-CleanArchitectureTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble-framework/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (

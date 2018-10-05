@@ -1,4 +1,5 @@
 platform :ios, '9.0'
+use_frameworks!
 workspace 'CleanArchitecture.xcworkspace'
 
 def unit_test_pods
@@ -6,8 +7,6 @@ def unit_test_pods
 end
 
 target 'CleanArchitecture' do
-    use_frameworks!
-
     target 'CleanArchitectureTests' do
         inherit! :search_paths
         unit_test_pods

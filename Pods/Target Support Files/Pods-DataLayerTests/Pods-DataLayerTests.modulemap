@@ -1,4 +1,4 @@
-module Pods_DataLayerTests {
+framework module Pods_DataLayerTests {
   umbrella header "Pods-DataLayerTests-umbrella.h"
 
   export *

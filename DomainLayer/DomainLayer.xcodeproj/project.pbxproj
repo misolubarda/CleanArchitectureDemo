@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81456FF1A340E4FE211FF033 /* Pods_DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C50B4E4733FC1A0786B55D /* Pods_DomainLayer.framework */; };
 		9A29DD0721612006002B3C2C /* MovieSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A29DD0621612006002B3C2C /* MovieSearchProvider.swift */; };
 		9A29DD0F2161238F002B3C2C /* MovieSearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A29DD0E2161238F002B3C2C /* MovieSearchInteractorTests.swift */; };
 		9A4B15AB2160AECE00B36592 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B15A12160AECE00B36592 /* DomainLayer.framework */; };
@@ -15,8 +16,7 @@
 		9A7D1F072160B3F8003A1158 /* MovieSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F062160B3F8003A1158 /* MovieSearchUseCase.swift */; };
 		9A7D1F092160B484003A1158 /* MovieSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F082160B484003A1158 /* MovieSearchInteractor.swift */; };
 		9AA76EF82160B0DD00729CE7 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA76EF72160B0DD00729CE7 /* TestFile.swift */; };
-		C6A42D9BC4C532ED00353266 /* libPods-DomainLayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99472FDE03079CEA44C26CA7 /* libPods-DomainLayerTests.a */; };
-		FF0DFA2C856DF11FB225215F /* libPods-DomainLayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED150996734E66C8571FCCEC /* libPods-DomainLayer.a */; };
+		D3AF092ECC1614BF2F7BBC18 /* Pods_DomainLayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909542856D9CACCAA1A41363 /* Pods_DomainLayerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		601F55A495F946FD0F1F704C /* Pods-DomainLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainLayer.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DomainLayer/Pods-DomainLayer.release.xcconfig"; sourceTree = "<group>"; };
-		99472FDE03079CEA44C26CA7 /* libPods-DomainLayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DomainLayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		909542856D9CACCAA1A41363 /* Pods_DomainLayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainLayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A29DD0621612006002B3C2C /* MovieSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchProvider.swift; sourceTree = "<group>"; };
 		9A29DD0E2161238F002B3C2C /* MovieSearchInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchInteractorTests.swift; sourceTree = "<group>"; };
 		9A4B15A12160AECE00B36592 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,8 +44,8 @@
 		9A7D1F082160B484003A1158 /* MovieSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchInteractor.swift; sourceTree = "<group>"; };
 		9AA76EF72160B0DD00729CE7 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		AFEE9A12F44094047FC42677 /* Pods-DomainLayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainLayerTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DomainLayerTests/Pods-DomainLayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3C50B4E4733FC1A0786B55D /* Pods_DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD0C7ED9FC2D438E2FB9E84 /* Pods-DomainLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainLayer.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DomainLayer/Pods-DomainLayer.debug.xcconfig"; sourceTree = "<group>"; };
-		ED150996734E66C8571FCCEC /* libPods-DomainLayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DomainLayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01FBA6C21EE835CEDDC8EAD /* Pods-DomainLayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainLayerTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DomainLayerTests/Pods-DomainLayerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF0DFA2C856DF11FB225215F /* libPods-DomainLayer.a in Frameworks */,
+				81456FF1A340E4FE211FF033 /* Pods_DomainLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A4B15AB2160AECE00B36592 /* DomainLayer.framework in Frameworks */,
-				C6A42D9BC4C532ED00353266 /* libPods-DomainLayerTests.a in Frameworks */,
+				D3AF092ECC1614BF2F7BBC18 /* Pods_DomainLayerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +84,8 @@
 		02F1922B022B35E020357253 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED150996734E66C8571FCCEC /* libPods-DomainLayer.a */,
-				99472FDE03079CEA44C26CA7 /* libPods-DomainLayerTests.a */,
+				D3C50B4E4733FC1A0786B55D /* Pods_DomainLayer.framework */,
+				909542856D9CACCAA1A41363 /* Pods_DomainLayerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,6 +213,7 @@
 				9A4B15A62160AECE00B36592 /* Sources */,
 				9A4B15A72160AECE00B36592 /* Frameworks */,
 				9A4B15A82160AECE00B36592 /* Resources */,
+				5371ACCDA943451F95C8BACE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +281,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5371ACCDA943451F95C8BACE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-DomainLayerTests/Pods-DomainLayerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DomainLayerTests/Pods-DomainLayerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B8DA67B3EE976D854CAE28DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
