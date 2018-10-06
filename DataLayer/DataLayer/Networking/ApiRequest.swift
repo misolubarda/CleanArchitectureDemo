@@ -1,5 +1,5 @@
 //
-//  Request.swift
+//  ApiRequest.swift
 //  DataLayer
 //
 //  Created by Lubarda, Miso on 10/1/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Request {
+struct ApiRequest {
     let baseUrlString = "http://api.themoviedb.org/3"
     let authParameters = "?" + "api_key=2696829a81b1b5827d515ff121700838"
     let endpoint: Endpoint

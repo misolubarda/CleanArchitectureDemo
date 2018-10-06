@@ -21,7 +21,7 @@ public class TMDBMovieSearchProvider: MovieSearchProvider {
     }
 
     public func query(for term: String, completion: @escaping (Response<Movies>) -> Void) {
-        guard let request = Request(endpoint: .search(term: term)).urlRequest else {
+        guard let request = ApiRequest(endpoint: .search(term: term)).urlRequest else {
             completion(.error(RequestError.urlRequestFailed))
             return
         }
