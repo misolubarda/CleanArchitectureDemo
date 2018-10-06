@@ -9,17 +9,15 @@
 import UIKit
 import DomainLayer
 
-protocol MovieListViewControllerDependencies {
-    var searchUseCase: MovieSearchUseCase { get }
-}
+protocol MovieListViewControllerDependencies: MovieListTableDataSourceDependencies {}
 
 class MovieListViewController: UIViewController {
     private let searchTerm: String
-    private let dependencies: MovieListViewControllerDependencies
+    private let dataSource: MovieListTableDataSource
 
     init(searchTerm: String, dependencies: MovieListViewControllerDependencies) {
         self.searchTerm = searchTerm
-        self.dependencies = dependencies
+        dataSource = MovieListTableDataSource(dependencies: dependencies)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -30,17 +28,6 @@ class MovieListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        search(for: searchTerm)
-    }
-
-    private func search(for term: String) {
-        dependencies.searchUseCase.query(for: searchTerm) { response in
-            switch response {
-            case let .success(movies):
-                break
-            case let .error(error):
-                break
-            }
-        }
+        dataSource.search(for: searchTerm)
     }
 }
