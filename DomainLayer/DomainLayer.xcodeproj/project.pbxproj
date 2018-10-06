@@ -15,6 +15,7 @@
 		9A7D1F032160B31C003A1158 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F022160B31C003A1158 /* Response.swift */; };
 		9A7D1F072160B3F8003A1158 /* MovieSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F062160B3F8003A1158 /* MovieSearchUseCase.swift */; };
 		9A7D1F092160B484003A1158 /* MovieSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F082160B484003A1158 /* MovieSearchInteractor.swift */; };
+		9A8FB5062168E8EB00D73EDF /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FB5052168E8EB00D73EDF /* Poster.swift */; };
 		9AA76EF82160B0DD00729CE7 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA76EF72160B0DD00729CE7 /* TestFile.swift */; };
 		D3AF092ECC1614BF2F7BBC18 /* Pods_DomainLayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909542856D9CACCAA1A41363 /* Pods_DomainLayerTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		9A7D1F022160B31C003A1158 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		9A7D1F062160B3F8003A1158 /* MovieSearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchUseCase.swift; sourceTree = "<group>"; };
 		9A7D1F082160B484003A1158 /* MovieSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchInteractor.swift; sourceTree = "<group>"; };
+		9A8FB5052168E8EB00D73EDF /* Poster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 		9AA76EF72160B0DD00729CE7 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		AFEE9A12F44094047FC42677 /* Pods-DomainLayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainLayerTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DomainLayerTests/Pods-DomainLayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3C50B4E4733FC1A0786B55D /* Pods_DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				9A7D1F002160B268003A1158 /* Movie.swift */,
+				9A8FB5052168E8EB00D73EDF /* Poster.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				9A7D1F012160B268003A1158 /* Movie.swift in Sources */,
 				9A7D1F092160B484003A1158 /* MovieSearchInteractor.swift in Sources */,
 				9A7D1F032160B31C003A1158 /* Response.swift in Sources */,
+				9A8FB5062168E8EB00D73EDF /* Poster.swift in Sources */,
 				9A29DD0721612006002B3C2C /* MovieSearchProvider.swift in Sources */,
 				9A7D1F072160B3F8003A1158 /* MovieSearchUseCase.swift in Sources */,
 				9AA76EF82160B0DD00729CE7 /* TestFile.swift in Sources */,
