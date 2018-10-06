@@ -6,14 +6,20 @@
 //  Copyright © 2018 Lubarda, Miso. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import DomainLayer
+
+protocol MovieListTableDataSourceFeedback: class {
+    func dataSourceDidUpdate()
+}
 
 protocol MovieListTableDataSourceDependencies {
     var searchUseCase: MovieSearchUseCase { get }
 }
 
-class MovieListTableDataSource {
+class MovieListTableDataSource: NSObject {
+    weak var feedback: MovieListTableDataSourceFeedback?
+    let movieCellId = "movieCellIdentifier"
     private let dependencies: MovieListTableDataSourceDependencies
     private var movies = Movies()
 
@@ -22,13 +28,27 @@ class MovieListTableDataSource {
     }
 
     func search(for term: String) {
-        dependencies.searchUseCase.query(for: term) { response in
+        dependencies.searchUseCase.query(for: term) { [weak self] response in
             switch response {
             case let .success(movies):
-                self.movies = movies
+                self?.movies = movies
+                self?.feedback?.dataSourceDidUpdate()
             case let .error(error):
                 break
             }
         }
+    }
+}
+
+extension MovieListTableDataSource: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let movie = movies[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: movieCellId, for: indexPath)
+        cell.textLabel?.text = movie.title
+        return cell
     }
 }
