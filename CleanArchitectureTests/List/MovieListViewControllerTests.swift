@@ -56,12 +56,21 @@ class MovieListViewControllerTests: XCTestCase {
 
         _ = viewController.view
 
-        expect(self.firstCell.textLabel?.text).to(equal(searchUseCaseFake.movies.first?.title))
+        expect(self.firstCell.titleLabel?.text).to(equal(searchUseCaseFake.movies.first?.title))
+    }
+
+    func test_viewDidLoad_onSearchResults_firstCellHasDescription() {
+        let moviesRange = (0...10)
+        searchUseCaseFake.movies = moviesRange.map { return Movie(number: $0) }
+
+        _ = viewController.view
+
+        expect(self.firstCell.descriptionLabel?.text).to(equal(searchUseCaseFake.movies.first?.overview))
     }
 }
 
 extension MovieListViewControllerTests {
-    var firstCell: UITableViewCell {
-        return viewController.tableView.cellForRow(at: IndexPath(row: 0, section: 0))!
+    var firstCell: MovieCell {
+        return viewController.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! MovieCell
     }
 }

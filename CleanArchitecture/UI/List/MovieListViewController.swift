@@ -35,7 +35,7 @@ class MovieListViewController: UIViewController {
     }
 
     private func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: dataSource.movieCellId)
+        tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: dataSource.movieCellId)
         tableView.dataSource = dataSource
         dataSource.feedback = self
     }

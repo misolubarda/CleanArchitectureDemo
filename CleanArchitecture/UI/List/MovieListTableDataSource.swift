@@ -46,9 +46,12 @@ extension MovieListTableDataSource: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let movie = movies[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: movieCellId, for: indexPath)
-        cell.textLabel?.text = movie.title
+        if let movieCell = cell as? MovieCell {
+            let movie = movies[indexPath.row]
+            movieCell.titleLabel.text = movie.title
+            movieCell.descriptionLabel.text = movie.overview
+        }
         return cell
     }
 }
