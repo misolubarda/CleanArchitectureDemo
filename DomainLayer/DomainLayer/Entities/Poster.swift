@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Poster {
+public struct Poster: Equatable {
     let path: String
     let image: Data
 }

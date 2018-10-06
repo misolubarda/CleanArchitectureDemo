@@ -17,6 +17,9 @@
 		9A7D1F092160B484003A1158 /* MovieSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D1F082160B484003A1158 /* MovieSearchInteractor.swift */; };
 		9A8FB5042168E88900D73EDF /* PosterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FB5032168E88900D73EDF /* PosterUseCase.swift */; };
 		9A8FB5062168E8EB00D73EDF /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FB5052168E8EB00D73EDF /* Poster.swift */; };
+		9A8FB5082168E95100D73EDF /* PosterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FB5072168E95100D73EDF /* PosterInteractor.swift */; };
+		9A8FB50A2168EB4800D73EDF /* PosterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FB5092168EB4800D73EDF /* PosterProvider.swift */; };
+		9A8FB50E2168EE4800D73EDF /* PosterInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FB50D2168EE4800D73EDF /* PosterInteractorTests.swift */; };
 		9AA76EF82160B0DD00729CE7 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA76EF72160B0DD00729CE7 /* TestFile.swift */; };
 		D3AF092ECC1614BF2F7BBC18 /* Pods_DomainLayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909542856D9CACCAA1A41363 /* Pods_DomainLayerTests.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,9 @@
 		9A7D1F082160B484003A1158 /* MovieSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchInteractor.swift; sourceTree = "<group>"; };
 		9A8FB5032168E88900D73EDF /* PosterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterUseCase.swift; sourceTree = "<group>"; };
 		9A8FB5052168E8EB00D73EDF /* Poster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
+		9A8FB5072168E95100D73EDF /* PosterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterInteractor.swift; sourceTree = "<group>"; };
+		9A8FB5092168EB4800D73EDF /* PosterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterProvider.swift; sourceTree = "<group>"; };
+		9A8FB50D2168EE4800D73EDF /* PosterInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterInteractorTests.swift; sourceTree = "<group>"; };
 		9AA76EF72160B0DD00729CE7 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		AFEE9A12F44094047FC42677 /* Pods-DomainLayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainLayerTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DomainLayerTests/Pods-DomainLayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3C50B4E4733FC1A0786B55D /* Pods_DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				9A29DD0621612006002B3C2C /* MovieSearchProvider.swift */,
+				9A8FB5092168EB4800D73EDF /* PosterProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -106,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9A29DD0E2161238F002B3C2C /* MovieSearchInteractorTests.swift */,
+				9A8FB50D2168EE4800D73EDF /* PosterInteractorTests.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 				9A7D1F062160B3F8003A1158 /* MovieSearchUseCase.swift */,
 				9A7D1F082160B484003A1158 /* MovieSearchInteractor.swift */,
 				9A8FB5032168E88900D73EDF /* PosterUseCase.swift */,
+				9A8FB5072168E95100D73EDF /* PosterInteractor.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -292,15 +301,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-DomainLayerTests/Pods-DomainLayerTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 			);
@@ -359,6 +364,8 @@
 				9A8FB5062168E8EB00D73EDF /* Poster.swift in Sources */,
 				9A29DD0721612006002B3C2C /* MovieSearchProvider.swift in Sources */,
 				9A7D1F072160B3F8003A1158 /* MovieSearchUseCase.swift in Sources */,
+				9A8FB50A2168EB4800D73EDF /* PosterProvider.swift in Sources */,
+				9A8FB5082168E95100D73EDF /* PosterInteractor.swift in Sources */,
 				9AA76EF82160B0DD00729CE7 /* TestFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A29DD0F2161238F002B3C2C /* MovieSearchInteractorTests.swift in Sources */,
+				9A8FB50E2168EE4800D73EDF /* PosterInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

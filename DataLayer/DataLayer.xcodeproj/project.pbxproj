@@ -16,6 +16,7 @@
 		9A6D9E0B2165191900184051 /* TMDBMovieSearchProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6D9E0A2165191900184051 /* TMDBMovieSearchProviderTests.swift */; };
 		9A6D9E0D21651C4600184051 /* WebServiceFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6D9E0C21651C4600184051 /* WebServiceFake.swift */; };
 		9A6D9E102165256800184051 /* MovieFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6D9E0F2165256800184051 /* MovieFake.swift */; };
+		9A8FB50C2168EB7B00D73EDF /* TMDBPosterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FB50B2168EB7B00D73EDF /* TMDBPosterProvider.swift */; };
 		9AA76EFA2160B0FA00729CE7 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA76EF92160B0FA00729CE7 /* TestFile.swift */; };
 		9AB00FF5216281F700E37DFE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB00FF4216281F700E37DFE /* Request.swift */; };
 		9AB00FF7216282D900E37DFE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB00FF6216282D900E37DFE /* Endpoint.swift */; };
@@ -49,6 +50,7 @@
 		9A6D9E0A2165191900184051 /* TMDBMovieSearchProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovieSearchProviderTests.swift; sourceTree = "<group>"; };
 		9A6D9E0C21651C4600184051 /* WebServiceFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceFake.swift; sourceTree = "<group>"; };
 		9A6D9E0F2165256800184051 /* MovieFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFake.swift; sourceTree = "<group>"; };
+		9A8FB50B2168EB7B00D73EDF /* TMDBPosterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBPosterProvider.swift; sourceTree = "<group>"; };
 		9AA76EF92160B0FA00729CE7 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		9AB00FF4216281F700E37DFE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9AB00FF6216282D900E37DFE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				9A29DD0321611FE8002B3C2C /* TMDBMovieSearchProvider.swift */,
+				9A8FB50B2168EB7B00D73EDF /* TMDBPosterProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -302,15 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-DataLayerTests/Pods-DataLayerTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 			);
@@ -364,6 +363,7 @@
 			files = (
 				9A29DD0421611FE8002B3C2C /* TMDBMovieSearchProvider.swift in Sources */,
 				9AB00FF5216281F700E37DFE /* Request.swift in Sources */,
+				9A8FB50C2168EB7B00D73EDF /* TMDBPosterProvider.swift in Sources */,
 				9AB00FF7216282D900E37DFE /* Endpoint.swift in Sources */,
 				9AB00FFB2162850000E37DFE /* NetworkSession.swift in Sources */,
 				9AB00FF92162849300E37DFE /* WebService.swift in Sources */,
