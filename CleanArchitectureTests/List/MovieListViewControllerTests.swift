@@ -67,6 +67,19 @@ class MovieListViewControllerTests: XCTestCase {
 
         expect(self.firstCell.descriptionLabel?.text).to(equal(searchUseCaseFake.movies.first?.overview))
     }
+
+    func test_viewDidLoad_onSearchResults_firstCellHasReleaseDate() {
+        let currentDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+        let expectedDateString = formatter.string(from: currentDate)
+        searchUseCaseFake.movies = [Movie(posterPath: nil, title: "", release: currentDate, overview: "")]
+
+        _ = viewController.view
+
+        expect(self.firstCell.releaseDateLabel?.text).to(equal(expectedDateString))
+    }
 }
 
 extension MovieListViewControllerTests {

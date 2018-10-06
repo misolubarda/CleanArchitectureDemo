@@ -11,6 +11,19 @@ import UIKit
 class MovieCell: UITableViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var relaseDateLabel: UILabel!
+    @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+
+    private static var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .none
+        formatter.dateStyle = .long
+        return formatter
+    }()
+
+    func setup(with title: String, release: Date, description: String, posterPath: String?) {
+        titleLabel.text = title
+        descriptionLabel.text = description
+        releaseDateLabel.text = MovieCell.dateFormatter.string(from: release)
+    }
 }

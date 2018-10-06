@@ -49,8 +49,7 @@ extension MovieListTableDataSource: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: movieCellId, for: indexPath)
         if let movieCell = cell as? MovieCell {
             let movie = movies[indexPath.row]
-            movieCell.titleLabel.text = movie.title
-            movieCell.descriptionLabel.text = movie.overview
+            movieCell.setup(with: movie.title, release: movie.release, description: movie.overview, posterPath: movie.posterPath)
         }
         return cell
     }
