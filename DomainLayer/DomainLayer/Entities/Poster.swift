@@ -11,4 +11,9 @@ import Foundation
 public struct Poster: Equatable {
     let path: String
     let image: Data
+
+    public init(path: String, image: Data) {
+        self.path = path
+        self.image = image
+    }
 }

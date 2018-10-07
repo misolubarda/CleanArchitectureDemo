@@ -20,7 +20,11 @@ public class TMDBPosterProvider: PosterProvider {
         self.service = service
     }
 
-    public func fetchPosters(with paths: [String], completion: @escaping (Response<Poster>) -> Void) {
-        
+    public func fetchPoster(with path: String, completion: @escaping (Response<Data>) -> Void) {
+        guard let request = ImageRequest(path: path).urlRequest else {
+            completion(.error(RequestError.urlRequestFailed))
+            return
+        }
+        service.execute(request, callback: completion)
     }
 }

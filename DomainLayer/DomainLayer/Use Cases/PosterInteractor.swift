@@ -16,6 +16,15 @@ public class PosterInteractor: PosterUseCase {
     }
 
     public func fetchPosters(with paths: [String], completion: @escaping (Response<Poster>) -> Void) {
-        provider.fetchPosters(with: paths, completion: completion)
+        paths.forEach { path in
+            provider.fetchPoster(with: path, completion: { response in
+                switch response {
+                case let .success(posterData):
+                    completion(.success(Poster(path: path, image: posterData)))
+                case let .error(error):
+                    completion(.error(error))
+                }
+            })
+        }
     }
 }

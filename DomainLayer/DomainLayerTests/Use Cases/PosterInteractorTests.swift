@@ -11,27 +11,41 @@ import Nimble
 @testable import DomainLayer
 
 class PosterInteractorTests: XCTestCase {
-    func test_fetch_returnsDataFromProvider() {
-        let providerFake = PosterProviderFake()
-        let interactor = PosterInteractor(provider: providerFake)
-        var result: Poster?
+    private let posters = [Poster(path: "somePath0", image: Data()),
+                           Poster(path: "somePath1", image: Data()),
+                           Poster(path: "somePath2", image: Data()),
+                           Poster(path: "somePath3", image: Data())]
+    private let providerFake = PosterProviderFake()
+    private lazy var interactor = PosterInteractor(provider: providerFake)
 
-        interactor.fetchPosters(with: [""]) { response in
+    override func setUp() {
+        providerFake.posters = posters
+    }
+
+    func test_fetchPosters_returnsFirstPosterData() {
+        var result: [Poster] = []
+
+        interactor.fetchPosters(with: posters.allPaths) { response in
             switch response {
             case let .success(poster):
-                result = poster
+                result.append(poster)
             default: break
             }
         }
 
-        expect(result).to(equal(providerFake.poster))
+        expect(result).to(contain(posters))
     }
 }
 
-private class PosterProviderFake: PosterProvider {
-    var poster: Poster = Poster(path: "somePath", image: Data())
+private extension Array where Element == Poster {
+    var allPaths: [String] { return self.map { $0.path } }
+}
 
-    func fetchPosters(with paths: [String], completion: @escaping (Response<Poster>) -> Void) {
-        completion(.success(poster))
+private class PosterProviderFake: PosterProvider {
+    var posters: [Poster] = []
+
+    func fetchPoster(with path: String, completion: @escaping (Response<Data>) -> Void) {
+        let data = posters.first { $0.path == path }.map { $0.image }
+        completion(.success(data!))
     }
 }

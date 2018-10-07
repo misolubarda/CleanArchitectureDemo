@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol PosterProvider {
-    func fetchPosters(with paths:[String], completion: @escaping (Response<Poster>) -> Void)
+    func fetchPoster(with path: String, completion: @escaping (Response<Data>) -> Void)
 }
