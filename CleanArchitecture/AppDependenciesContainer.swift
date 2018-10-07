@@ -11,4 +11,5 @@ import DataLayer
 
 class AppDependenciesContainer: AppCoordinatorDependencies {
     var searchUseCase: MovieSearchUseCase = MovieSearchInteractor(provider: TMDBMovieSearchProvider())
+    var posterUseCase: PosterUseCase = PosterInteractor(provider: TMDBPosterProvider())
 }

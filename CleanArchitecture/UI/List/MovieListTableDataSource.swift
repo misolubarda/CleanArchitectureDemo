@@ -15,6 +15,7 @@ protocol MovieListTableDataSourceFeedback: class {
 
 protocol MovieListTableDataSourceDependencies {
     var searchUseCase: MovieSearchUseCase { get }
+    var posterUseCase: PosterUseCase { get }
 }
 
 class MovieListTableDataSource: NSObject {

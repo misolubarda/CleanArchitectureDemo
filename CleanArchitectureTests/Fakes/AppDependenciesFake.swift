@@ -11,4 +11,5 @@ import DomainLayer
 
 class AppDependenciesFake: AppCoordinatorDependencies {
     var searchUseCase: MovieSearchUseCase = MovieSearchUseCaseFake()
+    var posterUseCase: PosterUseCase = PosterUseCaseFake()
 }
