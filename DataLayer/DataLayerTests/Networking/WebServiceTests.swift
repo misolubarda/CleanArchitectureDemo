@@ -12,21 +12,39 @@ import DomainLayer
 @testable import DataLayer
 
 class WebServiceTests: XCTestCase {
-    func test_execute_whenSuccessful_returnsSuccess() {
+    func test_execute_whenDecodableObjectExpected_respondsWithTheObject() {
         let sessionFake = NetworkSessionFake()
-        sessionFake.data = Data.movie
+        let movieData = Data.movie
+        sessionFake.data = movieData
         let service = WebServiceProvider(session: sessionFake)
-        var success: Bool?
+        var result: Movie?
 
         service.execute(URLRequest.fake) { (response: Response<Movie>) in
             switch response {
-            case .success:
-                success = true
+            case let .success(movie):
+                result = movie
             default: break
             }
         }
 
-        expect(success).to(beTrue())
+        expect(result).to(equal(movieData.decodedMovie))
+    }
+
+    func test_execute_whenDataObjectExpected_respondsWithData() {
+        let sessionFake = NetworkSessionFake()
+        sessionFake.data = Data.movie
+        let service = WebServiceProvider(session: sessionFake)
+        var result: Data?
+
+        service.execute(URLRequest.fake) { (response: Response<Data>) in
+            switch response {
+            case let .success(data):
+                result = data
+            default: break
+            }
+        }
+
+        expect(result).to(equal(Data.movie))
     }
 
     func test_execute_onError_returnsError() {
@@ -106,6 +124,10 @@ private extension Data {
         "title":"Batman",
         "release_date":"1989-06-23"}
         """.data(using: .utf8)!
+    }
+
+    var decodedMovie: Movie {
+        return try! JSONDecoder().decode(Movie.self, from: self)
     }
 }
 

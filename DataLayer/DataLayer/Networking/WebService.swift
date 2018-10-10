@@ -30,6 +30,11 @@ class WebServiceProvider: WebService {
         if let error = error {
             callback(.error(error))
         } else if let data = data  {
+            if T.self == Data.self {
+                callback(.success(data as! T))
+                return
+            }
+
             do {
                 let result = try JSONDecoder().decode(T.self, from: data)
                 callback(.success(result))
