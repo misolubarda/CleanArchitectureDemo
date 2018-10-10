@@ -20,10 +20,22 @@ class MovieCell: UITableViewCell {
         formatter.dateStyle = .long
         return formatter
     }()
+    private(set) var posterPath: String?
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        posterImageView.image = nil
+    }
 
     func setup(with title: String, release: Date, description: String, posterPath: String?) {
         titleLabel.text = title
         descriptionLabel.text = description
         releaseDateLabel.text = MovieCell.dateFormatter.string(from: release)
+        self.posterPath = posterPath
+    }
+
+    func updatePosterImage(_ image: UIImage) {
+        posterImageView.image = image
     }
 }

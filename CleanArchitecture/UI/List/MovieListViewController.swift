@@ -37,6 +37,7 @@ class MovieListViewController: UIViewController {
     private func setupTableView() {
         tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: dataSource.movieCellId)
         tableView.dataSource = dataSource
+        tableView.delegate = self
         dataSource.feedback = self
     }
 
@@ -48,5 +49,17 @@ class MovieListViewController: UIViewController {
 extension MovieListViewController: MovieListTableDataSourceFeedback {
     func dataSourceDidUpdate() {
         tableView.reloadData()
+        view.layoutIfNeeded()
+        dataSource.updatePosters(for: tableView.indexPathsForVisibleRows ?? [], in: tableView)
+    }
+}
+
+extension MovieListViewController: UITableViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        dataSource.updatePosters(for: tableView.indexPathsForVisibleRows ?? [], in: tableView)
+    }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        dataSource.updatePosters(for: tableView.indexPathsForVisibleRows ?? [], in: tableView)
     }
 }

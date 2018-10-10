@@ -39,6 +39,26 @@ class MovieListTableDataSource: NSObject {
             }
         }
     }
+
+    func updatePosters(for indexPaths: [IndexPath], in tableView: UITableView) {
+        guard let first = indexPaths.first?.row, let last = indexPaths.last?.row, last >= first else { return }
+        let posterPaths = movies[first...last].compactMap { $0.posterPath }
+        dependencies.posterUseCase.fetchPosters(with: posterPaths) { [weak self] response in
+            switch response {
+            case let .success(poster):
+                self?.updateVisibleCells(with: poster, in: tableView)
+            case .error: break
+            }
+        }
+    }
+
+    private func updateVisibleCells(with poster: Poster, in tableView: UITableView) {
+        guard let cells = tableView.visibleCells as? [MovieCell],
+            let cell = cells.first(where: { $0.posterPath == poster.path }),
+            let image = UIImage(data: poster.image) else { return }
+
+        cell.updatePosterImage(image)
+    }
 }
 
 extension MovieListTableDataSource: UITableViewDataSource {

@@ -9,8 +9,8 @@
 import Foundation
 
 public struct Poster: Equatable {
-    let path: String
-    let image: Data
+    public let path: String
+    public let image: Data
 
     public init(path: String, image: Data) {
         self.path = path

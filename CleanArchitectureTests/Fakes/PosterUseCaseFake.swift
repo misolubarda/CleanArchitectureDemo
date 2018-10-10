@@ -12,8 +12,12 @@ import DomainLayer
 
 class PosterUseCaseFake: PosterUseCase {
     var poster = Poster(path: "somePath", image: Data())
+    var requestCount = 0
+    var requestedPaths = [String]()
 
     func fetchPosters(with paths: [String], completion: @escaping (Response<Poster>) -> Void) {
+        requestCount += 1
+        requestedPaths = paths
         completion(.success(poster))
     }
 }
