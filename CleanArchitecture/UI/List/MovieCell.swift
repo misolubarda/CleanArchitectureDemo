@@ -25,13 +25,16 @@ class MovieCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
+        releaseDateLabel.text = nil
         posterImageView.image = nil
     }
 
-    func setup(with title: String, release: Date, description: String, posterPath: String?) {
+    func setup(with title: String, release: Date?, description: String, posterPath: String?) {
         titleLabel.text = title
         descriptionLabel.text = description
-        releaseDateLabel.text = MovieCell.dateFormatter.string(from: release)
+        if let release = release {
+            releaseDateLabel.text = MovieCell.dateFormatter.string(from: release)
+        }
         self.posterPath = posterPath
     }
 

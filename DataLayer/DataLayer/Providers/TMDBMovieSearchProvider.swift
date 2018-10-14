@@ -58,9 +58,7 @@ extension Movie: Decodable {
         let releaseString: String = try container.decode(String.self, forKey: .release)
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        guard let releaseDate = formatter.date(from: releaseString) else {
-            throw DecodingError.dataCorruptedError(forKey: CodingKeys.release, in: container, debugDescription: "Cannot convert string to date")
-        }
+        let releaseDate = formatter.date(from: releaseString)
         self.init(posterPath: posterPath, title: title, release: releaseDate, overview: overview)
     }
 }
