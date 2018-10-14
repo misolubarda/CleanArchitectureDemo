@@ -11,6 +11,9 @@ import DomainLayer
 
 public class TMDBPosterProvider: PosterProvider {
     private let service: WebService
+    private var postersCache: [String: Data] = [:]
+
+        public typealias PosterCompletion = ((Response<Data>) -> Void)
 
     public convenience init() {
         self.init(service: WebServiceProvider(session: DataNetworkSession()))
@@ -20,11 +23,26 @@ public class TMDBPosterProvider: PosterProvider {
         self.service = service
     }
 
-    public func fetchPoster(with path: String, completion: @escaping (Response<Data>) -> Void) {
+    public func fetchPoster(with path: String, completion: @escaping PosterCompletion) {
+        if let posterData = postersCache[path] {
+            completion(.success(posterData))
+            return
+        }
+
         guard let request = ImageRequest(path: path).urlRequest else {
             completion(.error(RequestError.urlRequestFailed))
             return
         }
-        service.execute(request, callback: completion)
+        let callback = storeInCache(path: path, completion)
+        service.execute(request, callback: callback)
+    }
+
+    private func storeInCache(path: String, _ completion: @escaping PosterCompletion) -> PosterCompletion {
+        return { [weak self] response in
+            if case let .success(data) = response {
+                self?.postersCache[path] = data
+            }
+            completion(response)
+        }
     }
 }

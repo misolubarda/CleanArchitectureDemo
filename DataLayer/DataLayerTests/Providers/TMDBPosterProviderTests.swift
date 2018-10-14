@@ -80,4 +80,23 @@ class TMDBPosterProviderTests: XCTestCase {
 
         expect(error).to(beTrue())
     }
+
+    // MARK: Caching
+
+    func test_fetchPoster_retrivesStoredResultFromCache() {
+        var success = false
+        let posterPath = "posterPath"
+        provider.fetchPoster(with: posterPath) { _ in }
+
+        webServiceFake.result = nil
+        provider.fetchPoster(with: posterPath) { response in
+            switch response {
+            case .success:
+                success = true
+            default: break
+            }
+        }
+
+        expect(success).to(beTrue())
+    }
 }
